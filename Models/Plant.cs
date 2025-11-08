@@ -4,12 +4,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace GreenHouse.Models
 {
-    [Table("PLANTS")] // Mapeia para a tabela do banco
+    [Table("PLANTS")]
     public class Plant
     {
         [Key]
+        [Required]
         [Column("PLANT_NAME", TypeName = "char(30)")]
-        public string PlantName { get; set; }
+        public required string PlantName { get; set; }
 
         [Column("SENSOR_VALUE")]
         public float SensorValue { get; set; }

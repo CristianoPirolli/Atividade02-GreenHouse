@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home - GreenHouse";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem-vindo ao GreenHouse</h1>
+    <p class="lead">Sistema de gerenciamento de plantas e sensores</p>
+
+    <div class="mt-4">
+        <a asp-controller="Planta" asp-action="Index" class="btn btn-success btn-lg">
+            Ver Lista de Plantas
+        </a>
+    </div>
+
+    <div class="mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gerenciar Plantas</h5>
+                        <p class="card-text">Adicione, edite e remova plantas do sistema.</p>
+                        <a asp-controller="Planta" asp-action="Index" class="btn btn-primary">Acessar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitorar Sensores</h5>
+                        <p class="card-text">Acompanhe os valores dos sensores em tempo real.</p>
+                        <a asp-controller="Planta" asp-action="Index" class="btn btn-primary">Acessar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Criar Nova Planta</h5>
+                        <p class="card-text">Adicione uma nova planta ao sistema.</p>
+                        <a asp-controller="Planta" asp-action="Create" class="btn btn-primary">Criar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

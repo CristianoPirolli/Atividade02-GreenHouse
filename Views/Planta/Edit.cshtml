@@ -1,0 +1,43 @@
+@model GreenHouse.Models.Plant
+
+@{
+    ViewData["Title"] = "Editar Planta";
+}
+
+<h1>Editar Planta</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="PlantName" class="control-label">Nome da Planta</label>
+                <input asp-for="PlantName" class="form-control" readonly />
+                <span asp-validation-for="PlantName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SensorValue" class="control-label">Valor do Sensor</label>
+                <input asp-for="SensorValue" class="form-control" type="number" step="0.1" />
+                <span asp-validation-for="SensorValue" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SensorEvent" class="control-label">Data do Evento</label>
+                <input asp-for="SensorEvent" class="form-control" type="datetime-local" />
+                <span asp-validation-for="SensorEvent" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

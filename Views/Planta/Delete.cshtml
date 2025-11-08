@@ -1,0 +1,40 @@
+@model GreenHouse.Models.Plant
+
+@{
+    ViewData["Title"] = "Excluir Planta";
+}
+
+<h1>Excluir Planta</h1>
+
+<h3>Tem certeza que deseja excluir esta planta?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.PlantName)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.PlantName)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.SensorValue)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.SensorValue)
+        </dd>
+
+        <dt class="col-sm-3">
+            @Html.DisplayNameFor(model => model.SensorEvent)
+        </dt>
+        <dd class="col-sm-9">
+            @Html.DisplayFor(model => model.SensorEvent)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="PlantName" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Voltar para Lista</a>
+    </form>
+</div>
